@@ -1,5 +1,7 @@
 # Rain File Archiver
 
+This project is inspired by: [assignment specs.pdf](https://github.com/ZakriyaParacha46/Rain-linux-based-tool-for-Compressing-files/files/11584434/assignment.2.specs.pdf)
+
 Rain is a file archiver tool written in C that allows you to create, list, check, and extract files from a custom file format called "drop." It supports various functionalities, including handling file permissions, hashing for integrity checks, and working with different storage formats.
 
 ## Getting Started
