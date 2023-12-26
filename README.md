@@ -86,6 +86,41 @@ Subset 2 introduces the ability to create a drop from a list of files.
 
 Subset 3 extends the functionality to work with files and directories, including different storage formats.
 
+## Reference Implementation
+
+A reference implementation, `1521 rain`, is provided as a common, efficient, and effective method to define an operational specification. Use it to find correct outputs and behaviors for any input:
+
+```bash
+$ 1521 rain -L examples/tiny.6-bit.drop
+-rw-r--r-- 6 0 a
+```
+
+Discovering and matching the reference implementation's behavior is deliberately a part of this assignment. Report bugs in the class forum.
+
+## Droplet Content Encodings
+
+- **8-bit Format (Subset 3 only):** Contents are an array of bytes, equivalent to the bytes in the original file.
+- **7-bit Format (Subset 3 only):** Contents are an array of bytes representing packed seven-bit values.
+- **6-bit Format (Subset 3 only):** Contents are an array of bytes of packed six-bit values.
+
+## Packed n-bit Encoding (Subset 3 only)
+
+Values are stored inside larger types. For example, the integer 42 only needs six bits, so only those bits are stored.
+
+## Droplet Hash
+
+Each droplet ends with a hash calculated from the other values of the droplet. The `droplet_hash()` function is used for this calculation.
+
+## Assumptions and Clarifications
+- Make as few assumptions as possible. If in doubt, match the output of the reference implementation.
+- Submitted code must be a single C program only.
+- Use C standard library functions available on CSE Linux systems.
+- Do not require extra compile options. Compile with `dcc *.c -o rain`.
+- Do not use functions from other libraries.
+- Disable debugging output before submission.
+- Do not create or use temporary files.
+- Do not create subprocesses.
+
 ## Contributing
 
 Feel free to contribute to this project. Please follow the [Contributing Guidelines](CONTRIBUTING.md).
@@ -95,9 +130,4 @@ Feel free to contribute to this project. Please follow the [Contributing Guideli
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-This is a basic template, and you may want to customize it further based on the specific details of your project. Make sure to include a `LICENSE` file and, if applicable, a `CONTRIBUTING.md` file for guidelines on contributing to your project.
-
-
-
-This project is inspired by: [assignment 2 specs.pdf](https://github.com/ZakriyaParacha46/Rain-linux-based-tool-for-Compressing-files/files/11584434/assignment.2.specs.pdf)
-![image](https://github.com/ZakriyaParacha46/Rain-linux-based-tool-for-Compressing-files/assets/82748498/58fba438-20dd-4bd3-a218-6495dae7a68c)
+This extended documentation includes information about the reference implementation, droplet format, droplet content encodings, packed n-bit encoding, droplet hash, assumptions, and clarifications. Customize it further if needed and ensure that the provided details align with your project's specifics.
