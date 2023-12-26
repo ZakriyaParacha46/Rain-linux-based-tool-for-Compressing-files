@@ -2,25 +2,6 @@
 
 Rain is a file archiver tool written in C that allows you to create, list, check, and extract files from a custom file format called "drop." It supports various functionalities, including handling file permissions, hashing for integrity checks, and working with different storage formats.
 
-## Table of Contents
-
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-  - [List Contents](#list-contents)
-  - [Detailed List Contents](#detailed-list-contents)
-  - [Check Drop](#check-drop)
-  - [Extract Drop](#extract-drop)
-  - [Create Drop](#create-drop)
-- [Subsets](#subsets)
-  - [Subset 0](#subset-0)
-  - [Subset 1](#subset-1)
-  - [Subset 2](#subset-2)
-  - [Subset 3](#subset-3)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Getting Started
 
 ### Prerequisites
